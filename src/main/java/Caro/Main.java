@@ -1,18 +1,17 @@
 package src.main.java.Caro;
 
-import java.util.Scanner;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
+
+    @Override
+    public void start(Stage stage) {
+        CaroUI ui = new CaroUI();
+        ui.start(stage);
+    }
+
     public static void main(String[] args) {
-        
-        Scanner scan = new Scanner(System.in);
-        String ans;
-        do {
-            Game game = new Game();
-            game.start();
-            System.out.println("Play again? YES or NO");
-            ans = scan.next();
-            System.out.println(ans);
-        } while (ans.charAt(0) != 'N');
+        launch(args);
     }
 }

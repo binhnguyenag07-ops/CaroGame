@@ -20,35 +20,35 @@ public class Game {
         this.player2 = new Player(player2name, 'O');
     }
     
-    public void start() {
-        Scanner inp = new Scanner(System.in);
-        while(!board.isWin())
-        {
-            if(turn % 2 == 1) {
-                int x1Play, y1Play;
-                do {
-                    System.out.print("x: ");
-                    x1Play = inp.nextInt();
-                    System.out.print("y: ");
-                    y1Play = inp.nextInt();
-                } while (!board.isValid(x1Play, y1Play));
-                board.playSymbol('X', x1Play, y1Play);
-            }
-            else {
-                int x2Play, y2Play;
-                do {
-                    System.out.print("x: ");
-                    x2Play = inp.nextInt();
-                    System.out.print("y: ");
-                    y2Play = inp.nextInt();
-                } while (!board.isValid(x2Play, y2Play));
-                board.playSymbol('O', x2Play, y2Play);
-            }
-            board.printBoard();
-            turn++;
-        }
-        if(turn % 2 == 1) System.out.println("Congratulation! Player 2 is the Winner");
-        else System.out.println("Congratulation! Player 1 is the Winner");
-        return;
-    }
+    // public void start() {
+    //     Scanner inp = new Scanner(System.in);
+    //     while(!board.isWin())
+    //     {
+    //         if(turn % 2 == 1) {
+    //             int x1Play, y1Play;
+    //             do {
+    //                 System.out.print("x: ");
+    //                 x1Play = inp.nextInt();
+    //                 System.out.print("y: ");
+    //                 y1Play = inp.nextInt();
+    //             } while (!board.isValid(x1Play, y1Play));
+    //             board.playSymbol('X', x1Play, y1Play);
+    //         }
+    //         else {
+    //             int x2Play, y2Play;
+    //             do {
+    //                 System.out.print("x: ");
+    //                 x2Play = inp.nextInt();
+    //                 System.out.print("y: ");
+    //                 y2Play = inp.nextInt();
+    //             } while (!board.isValid(x2Play, y2Play));
+    //             board.playSymbol('O', x2Play, y2Play);
+    //         }
+    //         board.printBoard();
+    //         turn++;
+    //     }
+    //     if(turn % 2 == 1) System.out.println("Congratulation! Player 2 is the Winner");
+    //     else System.out.println("Congratulation! Player 1 is the Winner");
+    //     return;
+    //}
 }

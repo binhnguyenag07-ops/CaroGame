@@ -3,11 +3,13 @@ package src.main.java.Caro;
 public class Board {
     public char matrix[][];
     public int size;
+    public int turn = 1;
     public int directionX[] = {1, 1, 1, -1, -1, -1, 0, 0};
     public int directionY[] = {1, 0, -1, 1, 0, -1, 1, -1};
 
     public void playSymbol(char symbol, int coorX, int coorY) {
         matrix[coorX][coorY] = symbol;
+        turn++;
     }
 
     public void printBoard() {
@@ -57,7 +59,7 @@ public class Board {
         return false;
     }
     public boolean isValid(int coorX, int coorY) {
-        if(matrix[coorX][coorY] != '.') {
+        if(matrix[coorX][coorY] == 'X' || matrix[coorX][coorY] == 'O') {
             return false;
         }
         return true;
