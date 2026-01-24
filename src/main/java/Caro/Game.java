@@ -19,8 +19,10 @@ public class Game {
         this.player1 = new Player(player1name, 'X');
         this.player2 = new Player(player2name, 'O');
     }
-    
-    // public void start() {
+}
+
+
+// public void start() {
     //     Scanner inp = new Scanner(System.in);
     //     while(!board.isWin())
     //     {
@@ -51,4 +53,3 @@ public class Game {
     //     else System.out.println("Congratulation! Player 1 is the Winner");
     //     return;
     //}
-}
